@@ -3,6 +3,9 @@ const controller = require('./controller')
 
 const app = express()
 
+var cors = require('cors')
+app.use(cors({optionsSuccessStatus: 200}))
+
 controller(app)
 
 app.use('/', (req, res) => {
